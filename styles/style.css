@@ -90,15 +90,14 @@ h1{
     -2px  2px 0 #000,
     -2px  0   0 #000;
 }
- .list{
+ .list {
     height: auto;
-    text-align: justify;
-    box-sizing: border-box;
-    padding: 30px 20px;
-    width:100%;
     
+    box-sizing: border-box;
+    padding: 10px;
+   
 }
-@media screen and (max-height:750px){
+@media screen and (orientation: landscape){
     .list{
         text-align: center;
         margin-top: 50px;
