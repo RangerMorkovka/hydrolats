@@ -16,7 +16,7 @@
     </nav>
    
     
-        <a class="btn" href=""><img src="images\contact.png" alt="Обратная связь"></a>
+        <a class="btn" ><img src="images\contact.png" alt="Обратная связь"></a>
 
        
     
@@ -38,20 +38,28 @@
     
     </main>
     
-    <div></div><form id="form">
-        <label>Ваше имя 
-            <input type="text" name="name" placeholder="Ваше имя" required autofocus>
-        </label>
-        <label>Телефон 
-            <input type="text" name="phone" placeholder="Ваш телефон" required autofocus>
-        </label>
-        
-        <button type="submit">Отправить</button>
-    </form>
-</div>
+    <div class="form" id="form" >
+		<h2 class="mainText">Обратная связь</h2>
+		<p class="secondText">Оставьте Ваши данные и мы свяжемся с Вами!</p>
+		<div class="formInputs">
+            <div class="formInput">			
+			<input type="text" placeholder="Ваше имя" required>
+        </div>
+		
+		<div class="formInput">			
+			<input type="phone" placeholder="Телефон или e-mail" required>
+		</div>
+    </div>
+		<button class="send" value="Отправить">Отправить</button>
+	</div>
   
     </div>
-    
+    <script>
+        /*document.querySelector('.btn').addEventListener('click' , function feedBack(){
+            let form = document.getElementById("form");
+            form.style.visibility = "visible";
+            })*/
+    </script>
     
     
 </body>

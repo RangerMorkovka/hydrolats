@@ -1,5 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
-
+@font-face {
+    font-family: "Montserrat_Alternates";
+    src: url(/fonts/Montserrat_Alternates/MontserratAlternates-Medium.ttf);
+    font-style: normal; 
+  font-weight: normal; 
+}
 
 
 
@@ -7,21 +11,22 @@ html body{
     margin: 0;
     padding: 0;
     height: 100vh;
+    display: flex;
 
 }
 .container {
+
     background: url(/images/main_background-image.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-    position: absolute;
-    
-    
+    position: absolute;   
+
     }
     
-    .pagination {
+.pagination {
         
         width: 32px;
         min-height:100%;
@@ -29,20 +34,20 @@ html body{
         left: 50%;
         }
 
-    a {
-        display: block;
-    }
+a {
+    display: block;
+  }
 
-    .link-1 {
+.link-1 {
         top: 25px;           
         position:absolute ;              
     }
 
-    .link-2 {          
+.link-2 {          
         bottom: 25px;
         position: absolute;             
     }
- .btn{
+.btn{
     margin-top: 25px;
     margin-right: 30px;
     margin-bottom: 0;
@@ -50,6 +55,7 @@ html body{
     width: 80px;
     height: 110px;
     position: relative;
+    cursor: pointer;
 
 }
 main{
@@ -68,7 +74,7 @@ main{
 .header{
     
     
-    text-align: center;
+ text-align: center;
    
 }
 
@@ -90,9 +96,8 @@ h1{
     -2px  2px 0 #000,
     -2px  0   0 #000;
 }
- .list {
+.list {
     height: auto;
-    
     box-sizing: border-box;
     padding: 10px;
    
@@ -126,9 +131,166 @@ h1{
     font-size: calc(16px + 6 * (100vw - 320px) / 1080);
     
 }
-#form{
-    
-    
+.form {
+ 
+    background: rgba(211, 176, 50, 1);
+    width: 400px;
+    height: 360px;
+	box-shadow: 0 0  10px #FF8C00 ;
+    border: 1px solid rgba(0, 0, 0, 0.5) ;
+    border-radius: 8px;
+	
+	text-align: center;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    visibility: visible;
+}
+.mainText {
+	
+position: absolute;
+width: 190px;
+height: 25px;
+
+margin-top: 20px;
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+letter-spacing: 0.02em;
+color: #000000;
+
+}
+@media screen and  (orientation: landscape){
+.mainText {
+    width: 400px;
+   
+    text-align:center;
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    }    
+}
+
+.secondText {
+
+position: absolute;
+width: 400px;
+height: 15px;
+
+margin-top: 65px;
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+letter-spacing: 0.02em;
+color: #000000;
+
 }
 
 
+@media screen and (orientation : landscape) {
+.secondText { 
+    font-size: 15px;
+    text-align: center;
+    }
+    
+}
+
+.formInputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 110px;
+    align-items: center;
+    width: 400px;
+    height: 100px;
+    
+
+}
+
+.formInput{
+    width: 340px;
+    height:40px;
+   box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.3);
+    outline: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    }
+
+
+
+.formInput input {
+   
+    background:rgba(217, 217, 217, 0.9);
+    border-radius: 8px;
+    width: 340px;
+    height: 40px;
+    /*box-sizing: border-box;*/
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    
+}
+.send {
+    width:120px;
+    height: 40px; 
+    border-radius: 5px;
+   border: 2px solid rgba(0, 0, 0, 0.55);
+   background-color: #D9D9D9;
+   margin-top: 40px;
+   font-family: 'Montserrat_Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+letter-spacing: 0.02em;
+color: #000000;
+
+}
+@media screen and (orientation : landscape){
+    .send {
+        font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 15px;
+text-align: center;
+letter-spacing: 0.02em;
+color: #000000;
+
+    }
+}
+
+
+/*.send {
+	border: none;
+	color: #fff;
+	background: #058cdd;
+	width: 180px;
+	height: 40px;
+	border-radius: 40px;
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: 30px;
+	box-shadow: 0 0 20px 0 rgba(5, 140, 221, .8);
+	transition: .4s;
+	outline: none;
+}
+
+.send:hover {
+	box-shadow: 0 0 25px 5px rgba(5, 140, 221, 1);
+}
