@@ -6,6 +6,7 @@
     <title>Гидролаты</title>
     
     <link rel="stylesheet" href="/styles/style.css">
+
 </head>
 <body>
    
@@ -38,29 +39,36 @@
     
     </main>
     
-    <div class="form" id="form" >
+    <div class="form"  novalidate >
 		<h2 class="mainText">Обратная связь</h2>
 		<p class="secondText">Оставьте Ваши данные и мы свяжемся с Вами!</p>
 		<div class="formInputs">
             <div class="formInput">			
-			<input type="text" placeholder="Ваше имя" required>
+			<input type="text" name="username" placeholder="Ваше имя" required/>
         </div>
 		
 		<div class="formInput">			
-			<input type="phone" placeholder="Телефон или e-mail" required>
+			<input type="phone" placeholder="Ваш телефон" pattern="" required/>
 		</div>
-    </div>
-		<button class="send" value="Отправить">Отправить</button>
+        <div>
+            <input 
+            type="checkbox"
+            class="form__checkbox"
+            checked
+            aria-describedby="checkbox-error"
+            required>
+            <span class="form__checkbox-title"> Я согласен на обработку персональных данных</span>
+           
+            
+        </div>
+    <div>
+		<input class= "send" type="submit" value="Отправить">
 	</div>
   
     </div>
-    <script>
-        /*document.querySelector('.btn').addEventListener('click' , function feedBack(){
-            let form = document.getElementById("form");
-            form.style.visibility = "visible";
-            })*/
-    </script>
+    
     
     
 </body>
+<script src="/scripts/project.js"></script>
 </html>
