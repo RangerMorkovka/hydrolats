@@ -17,7 +17,10 @@
     </nav>
    
     
-        <a class="btn" ><img src="images\contact.png" alt="Обратная связь"></a>
+        <button 
+        class="button__form" 
+        type="button"><img src="images/contact.png">
+        </button>
 
        
     
@@ -39,18 +42,49 @@
     
     </main>
     
-    <div class="form"  novalidate >
-		<h2 class="mainText">Обратная связь</h2>
-		<p class="secondText">Оставьте Ваши данные и мы свяжемся с Вами!</p>
-		<div class="formInputs">
-            <div class="formInput">			
-			<input type="text" name="username" placeholder="Ваше имя" required/>
+    
+    <form
+    class="form"
+    name="form"
+    method="POST"
+    novalidate >
+		<div class="form__field-container">Обратная связь</div> 
+		<div class="form__field-container">Оставьте Ваши данные и мы свяжемся с Вами!</div>
+		<div class="form__field-container">
+            			
+			<input 
+			type="text" 
+			name="username" 
+			id="input__name"
+			class="form__input"
+			placeholder="Ваше имя"
+			pattern="^[а-яА-ЯЁё]+$"
+			data-error-message="Разрешены символы кириллицы"
+			aria-describedby="name-error"
+			required/>
+			<span 
+			class="form__error input__name-error"
+			id="name-error"
+			aria-live="polite"></span>
+        
         </div>
 		
-		<div class="formInput">			
-			<input type="phone" placeholder="Ваш телефон" pattern="" required/>
+		<div class="form__field-container">			
+			<input 
+			type="phone" 
+			class="form__input"
+			id="input__phone"
+			pattern="^([+]\d{2}[ ])?\d{10}$"
+			placeholder="Ваш телефон"
+		data-error-message="Неверный формат номера телефона"
+		aria-describedby="phone-error"
+			required/>
+			<span 
+			class="form__error input__phone-error"
+			id="phone-error"
+			aria-live="polite"></span>
 		</div>
-        <div>
+        <div class="form__field-container">
             <input 
             type="checkbox"
             class="form__checkbox"
@@ -61,11 +95,12 @@
            
             
         </div>
-    <div>
-		<input class= "send" type="submit" value="Отправить">
+   <div class="form__field-container">
+		<button class= "button" type="submit" value="Отправить">Отправить</button>
 	</div>
   
-    </div>
+    </form>
+
     
     
     

@@ -1,16 +1,18 @@
-const showForm  = document.querySelector('.btn').addEventListener('click' ,    function feedBack(){
-            const form = document.querySelector(".form");
-            form.style.visibility = "visible";
-            })
 
 const form = document.querySelector('.form')
 const inputList = Array.from(form.querySelectorAll('.formInput'))
 const checkboxElement = form.querySelector('.form__type-checkbox')
 const buttonElement = form.querySelector('.button')
 const formErrorElement = form.querySelector('.form__empty-error')
+const showForm  = document.querySelector(".button__form")
+
+showForm.addEventListener('click' ,    function feedBack(){
+     form.style.visibility = "visible";
+            })
+
+
 
 startValidation()
-
 function startValidation() {
   toggleButton()
   form.addEventListener('submit', (event) => {
