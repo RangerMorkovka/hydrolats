@@ -48,10 +48,13 @@
     name="form"
     method="POST"
     novalidate >
-		<div class="form__field-container">Обратная связь</div> 
-		<div class="form__field-container">Оставьте Ваши данные и мы свяжемся с Вами!</div>
+		<div class="form__header">
+			Обратная связь
+		</div> 
+		<div class="form__text">
+			Оставьте Ваши данные и мы свяжемся с Вами!</div>
 		<div class="form__field-container">
-            			
+			
 			<input 
 			type="text" 
 			name="username" 
@@ -76,8 +79,8 @@
 			id="input__phone"
 			pattern="^([+]\d{2}[ ])?\d{10}$"
 			placeholder="Ваш телефон"
-		data-error-message="Неверный формат номера телефона"
-		aria-describedby="phone-error"
+		    data-error-message="Неверный формат номера телефона"
+		    aria-describedby="phone-error"
 			required/>
 			<span 
 			class="form__error input__phone-error"
