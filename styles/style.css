@@ -16,6 +16,7 @@ body{
     height: 100vh;
     overflow: hidden;
     
+    
    
 
 }
@@ -29,19 +30,16 @@ body{
     width: 100%;
     height: 100%;
     position: absolute;   
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
 
     }
     
-.pagination {
-        
-        width: 32px;
-        min-height:100%;
-        position: absolute;              
-        left: 48%;
-        
-        }
+
 .button__form {
-	display: block;
+	/*display: block;*/
 	outline: none;
 	background: none;
     padding: 0;
@@ -57,32 +55,15 @@ body{
   }
  
 
-.link-1 {
-        top: 25px;           
-        position:absolute ;              
-    }
 
-.link-2 {          
-        bottom: 25px;
-        position: absolute;             
-    }
 
-main{
-    display: block;
-    height: auto;
-    margin-top: 60px;
 
-}
-@media screen and (min-height:800px) {
-    main{
-        margin-top: 150px;
-    }
 
     
-}
+
 .header{
     
-    
+ padding-bottom: 50px;   
  text-align: center;
    
 }
@@ -107,14 +88,14 @@ h1{
 }
 .list {
     height: auto;
-    box-sizing: border-box;
+    
     padding: 10px;
    
 }
 @media screen and (orientation: landscape){
     .list{
         text-align: center;
-        margin-top: 50px;
+        margin-bottom: 150px;
         
     }
 }
@@ -154,9 +135,10 @@ h1{
     border-radius: 8px;
 	display:flex;
 	flex-direction: column;
-    gap: 10px;
-   /* visibility: hidden;*/
-    align-items: center;
+	justify-content: space-evenly;
+   
+   visibility: hidden;
+   align-items: center;
     
     
     
@@ -164,7 +146,7 @@ h1{
 
 .form__header {
 	
-  padding-top:20px ;
+  
   font-family: 'Montserrat Alternates';
   font-style: normal;
   font-weight: 600;
@@ -189,7 +171,7 @@ h1{
 
 
 .form__text {
-padding-top: 20px;
+
 font-family: 'Montserrat Alternates';
 font-style: normal;
 font-weight: 500;
@@ -219,21 +201,22 @@ color: #000000;
 }
 
 
-/*.form__input{
+.form__input{
     width: 340px;
     height:40px;
     box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.3);
     outline: 2px solid rgba(0, 0, 0, 0.4);
     border-radius: 5px;
+    
 
     
 
-    }*/
+    }
  .form__checkbox {
    
 	width: 15px;
 	height: 15px;
-    margin: 30px auto auto -10px;
+  margin: 30px auto auto -10px;
 	
 	
     }
@@ -259,7 +242,7 @@ color: #000000;
     border-radius: 5px;
     border: 2px solid rgba(0, 0, 0, 0.55);
     background-color: #D9D9D9;
-    margin: 15px auto;
+    
     font-family: 'Montserrat_Alternates';
     font-style: normal;
     font-weight: 500;
@@ -286,3 +269,18 @@ color: #000000;
 .send:hover {
 	box-shadow: 0 0 25px 5px rgba(5, 140, 221, 1);
 }
+.form__type-input-error {
+    border: 1px solid #FF8630;
+    background-color: rgb(255 134 48 / 0.1);
+  }
+  
+  /* Для отображения span-элемента с ошибкой */
+  .form__error-active {
+    display: block;
+  }
+  
+  /* Для блокировки кнопки submit */
+  .button-inactive {
+    cursor: default;
+    background-color: rgba(221, 18, 18, 0.6);
+  }

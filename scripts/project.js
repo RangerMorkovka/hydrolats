@@ -1,6 +1,6 @@
 
 const form = document.querySelector('.form')
-const inputList = Array.from(form.querySelectorAll('.formInput'))
+const inputList = Array.from(form.querySelectorAll('.form__input'))
 const checkboxElement = form.querySelector('.form__type-checkbox')
 const buttonElement = form.querySelector('.button')
 const formErrorElement = form.querySelector('.form__empty-error')
@@ -71,6 +71,7 @@ function hasInvalidInput() {
 
 function toggleErrorSpan(inputElement, errorMessage){
   const errorElement = document.querySelector(`.${inputElement.id}-error`)
+  
   if (errorMessage) {
     inputElement.classList.add('form__type-input-error')
     errorElement.textContent = errorMessage
