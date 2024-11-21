@@ -11,10 +11,10 @@
 <body>
    
     <div class="container">
-                   <nav class="pagination" > 
+                   
         <a class="link-1" href=""><img src="images\pre-arrow__item.png" alt="Предыдущий слайд"></a>
-        <a class="link-2" href=""><img src="images\next-arrow__item.png" alt="Следующий слайд"></a>
-    </nav>
+        
+    
    
     
         <button 
@@ -25,7 +25,7 @@
        
     
     
-    <main>
+    
    <header class="header">
         <h1>Душистая вода одуванчика <br> без спирта и консервантов</h1>
     </header>
@@ -39,8 +39,9 @@
             <li class="list-item">-антибактериальное действие;</li>
             <li class="list-item">-улучшение кровообращения, стимулирование обмена веществ в коже.</li>
         </ul>
+        <a class="link-2" href=""><img src="images\next-arrow__item.png" alt="Следующий слайд"></a>
     
-    </main>
+    
     
     
     <form
@@ -57,13 +58,13 @@
 			
 			<input 
 			type="text" 
-			name="username" 
+			
 			id="input__name"
 			class="form__input"
 			placeholder="Ваше имя"
 			pattern="^[а-яА-ЯЁё]+$"
 			data-error-message="Разрешены символы кириллицы"
-			aria-describedby="name-error"
+			
 			required/>
 			<span 
 			class="form__error input__name-error"
@@ -80,12 +81,12 @@
 			pattern="^([+]\d{2}[ ])?\d{10}$"
 			placeholder="Ваш телефон"
 		    data-error-message="Неверный формат номера телефона"
-		    aria-describedby="phone-error"
+		
 			required/>
 			<span 
 			class="form__error input__phone-error"
 			id="phone-error"
-			aria-live="polite"></span>
+			></span>
 		</div>
         <div class="form__field-container">
             <input 
@@ -100,6 +101,9 @@
         </div>
    <div class="form__field-container">
 		<button class= "button" type="submit" value="Отправить">Отправить</button>
+        <span
+        class="form__empty-error"
+        id="empty-error"></span>        
 	</div>
   
     </form>
