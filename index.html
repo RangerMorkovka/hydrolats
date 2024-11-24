@@ -47,6 +47,7 @@
     <form
     class="form"
     name="form"
+    action="./php/mail.php"
     method="POST"
     novalidate >
 		<div class="form__header">
@@ -58,7 +59,7 @@
 			
 			<input 
 			type="text" 
-			
+			name="name"
 			id="input__name"
 			class="form__input"
 			placeholder="Ваше имя"
@@ -76,7 +77,8 @@
 		
 		<div class="form__field-container">			
 		      <input 
-		      type="tel" 
+		      type="tel"
+		      name="tel"
 					class="form__input"
 					id="input__tel"
 					pattern="\+7\d{10}"
@@ -119,5 +121,6 @@
     
     
 </body>
+
 <script src="/scripts/project.js"></script>
 </html>
