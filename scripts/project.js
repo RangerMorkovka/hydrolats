@@ -1,7 +1,7 @@
 
 const form = document.querySelector('.form')
 const inputList = Array.from(form.querySelectorAll('.form__input'))
-const checkboxElement = form.querySelector('.form__type-checkbox')
+const checkboxElement = form.querySelector('.form__checkbox')
 const buttonElement = form.querySelector('.button')
 const formErrorElement = form.querySelector('.form__empty-error')
 const showForm  = document.querySelector(".button__form")
@@ -48,12 +48,13 @@ function checkInputValidity(inputElement) {
   if (inputElement.validity.patternMismatch) {
     inputElement.setCustomValidity(inputElement.dataset.errorMessage)
   } else {
+	
     inputElement.setCustomValidity(checkLengthMismatch(inputElement))
   }
 }
 
 function checkLengthMismatch(inputElement) {
-  if (inputElement.type !== 'text') {
+  if (inputElement.type !== 'text'&& inputElement.type !=='tel') {
     return ''
   }
   const valueLength = inputElement.value.trim().length
@@ -61,6 +62,13 @@ function checkLengthMismatch(inputElement) {
     return `Минимальное количество символов: ${inputElement.minLength}`
   }
   return ''
+}
+function toggleInputError(inputElement) {
+  if (!inputElement.validity.valid) {
+    toggleErrorSpan(inputElement, inputElement.validationMessage)
+  } else {
+    toggleErrorSpan(inputElement)
+  }
 }
 
 function hasInvalidInput() {
