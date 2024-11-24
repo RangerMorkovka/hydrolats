@@ -67,35 +67,42 @@
 			
 			required/>
 			<span 
-			class="form__error input__name-error"
+			class="form__error
+			input__name-error"
 			id="name-error"
 			aria-live="polite"></span>
         
         </div>
 		
 		<div class="form__field-container">			
-			<input 
-			type="phone" 
-			class="form__input"
-			id="input__phone"
-			pattern="^([+]\d{2}[ ])?\d{10}$"
-			placeholder="Ваш телефон"
-		    data-error-message="Неверный формат номера телефона"
+		      <input 
+		      type="tel" 
+					class="form__input"
+					id="input__tel"
+					pattern="\+7\d{10}"
+					placeholder="Ваш телефон"
+					data-error-message="Неверный формат номера телефона"
 		
-			required/>
+					required/>
 			<span 
-			class="form__error input__phone-error"
-			id="phone-error"
+			class="form__error
+			input__tel-error"
+			id="tel-error"
 			></span>
 		</div>
         <div class="form__field-container">
             <input 
             type="checkbox"
             class="form__checkbox"
+            id="form__checkbox"
+         
             checked
             aria-describedby="checkbox-error"
             required>
             <span class="form__checkbox-title"> Я согласен на обработку персональных данных</span>
+            <span
+            class="form__checkbox-error"
+            ></span>
            
             
         </div>
